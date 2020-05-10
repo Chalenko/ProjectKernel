@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DD301EE-5264-497F-BAF6-2FC1144D8103}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectKernel</RootNamespace>
+    <AssemblyName>ProjectKernel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ProjectKernel.XML</DocumentationFile>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Activity.cs" />
+    <Compile Include="Classes\DatabaseContext.cs" />
+    <Compile Include="Classes\Exceptions.cs" />
+    <Compile Include="Classes\Comparer\BooleanComparer.cs" />
+    <Compile Include="Classes\Comparer\ComparerType.cs" />
+    <Compile Include="Classes\Comparer\DateComparer.cs" />
+    <Compile Include="Classes\Comparer\NaturalComparer.cs" />
+    <Compile Include="Classes\Comparer\NumberComparer.cs" />
+    <Compile Include="Classes\Comparer\TextComparer.cs" />
+    <Compile Include="Classes\Exporter\AExporter.cs" />
+    <Compile Include="Classes\Exporter\AFileExporter.cs" />
+    <Compile Include="Classes\Exporter\AExcelExporter.cs" />
+    <Compile Include="Classes\Exporter\SimpleExcelExporter.cs" />
+    <Compile Include="Classes\Exporter\DataAccess\DGVDataAccessor.cs" />
+    <Compile Include="Classes\Exporter\DataAccess\IDataAccessor.cs" />
+    <Compile Include="Classes\Filter\FilterSet.cs" />
+    <Compile Include="Classes\Logger\FormattableLogger.cs" />
+    <Compile Include="Classes\Logger\IWriter.cs" />
+    <Compile Include="Classes\Logger\Format\TextFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Logger\LogData.cs" />
+    <Compile Include="Classes\Logger\Target\ConsoleLogger.cs" />
+    <Compile Include="Classes\Logger\Target\DBLogger.cs" />
+    <Compile Include="Classes\Logger\Target\FileLogger.cs" />
+    <Compile Include="Classes\Logger\Format\IFormatter.cs" />
+    <Compile Include="Classes\Logger\ILogger.cs" />
+    <Compile Include="Classes\Logger\Logger.cs" />
+    <Compile Include="Classes\Logger\Format\XMLFormatter.cs" />
+    <Compile Include="Classes\ModuleStorage.cs" />
+    <Compile Include="Classes\User\Password\Password.cs" />
+    <Compile Include="Classes\User\Password\PasswordVerificator.cs" />
+    <Compile Include="Classes\User\DBUser.cs" />
+    <Compile Include="Classes\Role.cs" />
+    <Compile Include="Classes\User\SystemUser.cs" />
+    <Compile Include="Classes\User\User.cs" />
+    <Compile Include="Controls\AbortableBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AdvancedDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AdvancedDataGridView.Designer.cs">
+      <DependentUpon>AdvancedDataGridView.cs</DependentUpon>
+    </Compile>
+    <None Include="Controls\AdvancedDataGridView1.cs" />
+    <Compile Include="Controls\ExtendedTreeNode.cs" />
+    <Compile Include="Controls\HeaderContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MergeableMenu\MergeableMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MergeableMenu\MergeableStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MergeableMenu\MergeableToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MergeableMenu\ToolStripVisualInheritanceFixer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NestedTreeNode.cs" />
+    <Compile Include="Controls\NestedTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NestedTreeView.Designer.cs">
+      <DependentUpon>NestedTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NestedTripleTreeNode.cs" />
+    <Compile Include="Controls\TableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TableControl.Designer.cs">
+      <DependentUpon>TableControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TripleTreeNode.cs" />
+    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Forms\ISelectableForm.cs" />
+    <Compile Include="Forms\DoubleClickAction.cs" />
+    <Compile Include="Forms\ViewModel\ChangePasswordFormViewModel.cs" />
+    <Compile Include="Forms\ViewModel\SelectFormViewModel.cs" />
+    <Compile Include="Forms\View\AdvancedWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\AdvancedWorkerForm.Designer.cs">
+      <DependentUpon>AdvancedWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewModel\LoginFormViewModel.cs" />
+    <Compile Include="Forms\View\ResetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewModel\UserViewModel.cs" />
+    <Compile Include="Forms\View\WorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View\WorkerForm.Designer.cs">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Classes.cd" />
+    <None Include="Forms.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 с пакетом обновления 1 %28SP1%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\HeaderContextMenuStrip.resx">
+      <DependentUpon>HeaderContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NestedTreeView.resx">
+      <DependentUpon>NestedTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TableControl.resx">
+      <DependentUpon>TableControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\AdvancedWorkerForm.resx">
+      <DependentUpon>AdvancedWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View\WorkerForm.resx">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_Filtered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedASC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedDESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_OrderedASC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_OrderedDESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_SavedFilters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_UnFiltered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCbool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCbool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_ResizeGrip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonCaseSensitive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonFromBegin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonWholeWord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

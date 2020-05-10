@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ProjectKernel.Classes.Comparer.DateComparer" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Comparer\DateComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Comparer.TextComparer" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Comparer\TextComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Comparer.NumberComparer" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Comparer\NumberComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Comparer.NaturalComparer" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAQBAIAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Classes\Comparer\NaturalComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.DatabaseContext">
+    <Position X="15.5" Y="12" Width="3.25" />
+    <AssociationLine Name="Instance" Type="ProjectKernel.Classes.DatabaseContext" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="16.313" />
+        <Point X="14.091" Y="16.313" />
+        <Point X="14.091" Y="14.375" />
+        <Point X="15.5" Y="14.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.522" Y="0.096" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AMAAAAAAAAAAAAABAAAFAEABAAAAAAQBQAAEACAAAAA=</HashCode>
+      <FileName>Classes\DatabaseContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.TextFormatter">
+    <Position X="10.5" Y="10.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ProjectKernel.Classes.Logger.TextFormatter.TXTWriter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Logger\Format\TextFormatter.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <AssociationLine Name="instance" Type="ProjectKernel.Classes.Logger.IFormatter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.688" Y="10.5" />
+        <Point X="10.688" Y="6.875" />
+        <Point X="12" Y="6.875" />
+        <Point X="12" Y="7.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.32" Y="0.5" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Instance" Type="ProjectKernel.Classes.Logger.IFormatter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="10.5" />
+        <Point X="11.25" Y="8.115" />
+        <Point X="11.75" Y="8.115" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAACAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Format\TextFormatter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+    <Lollipop Position="1.119" />
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.XMLFormatter">
+    <Position X="13" Y="10.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ProjectKernel.Classes.Logger.XMLFormatter.XMLWriter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Logger\Format\XMLFormatter.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <AssociationLine Name="instance" Type="ProjectKernel.Classes.Logger.IFormatter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.833" Y="10.5" />
+        <Point X="14.833" Y="6.875" />
+        <Point X="13.562" Y="6.875" />
+        <Point X="13.562" Y="7.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.965" Y="0.471" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Instance" Type="ProjectKernel.Classes.Logger.IFormatter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.278" Y="10.5" />
+        <Point X="14.278" Y="7.898" />
+        <Point X="13.75" Y="7.898" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAACAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Format\XMLFormatter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.LogData">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <AssociationLine Name="user" Type="ProjectKernel.Classes.User.User" FixedFromPoint="true">
+      <Path>
+        <Point X="9" Y="4.339" />
+        <Point X="5.75" Y="4.339" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAABQAAASA=</HashCode>
+      <FileName>Classes\Logger\LogData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="user" />
+      <Property Name="level" />
+      <Property Name="exception" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.Logger">
+    <Position X="18.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAGACAAAAAAAAAAAQAABAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Logger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.965" />
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.ConsoleLogger">
+    <Position X="24" Y="10" Width="2.5" />
+    <InheritanceLine Type="ProjectKernel.Classes.Logger.FormattableLogger" FixedFromPoint="true">
+      <Path>
+        <Point X="23.438" Y="9.136" />
+        <Point X="23.438" Y="9.625" />
+        <Point X="25.25" Y="9.625" />
+        <Point X="25.25" Y="10" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="currentLogger" Type="ProjectKernel.Classes.Logger.ConsoleLogger" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.438" Y="12.002" />
+        <Point X="24.438" Y="14.298" />
+        <Point X="26.062" Y="14.298" />
+        <Point X="26.062" Y="12.002" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.298" Y="0.507" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Instance" Type="ProjectKernel.Classes.Logger.ILogger" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26.5" Y="11" />
+        <Point X="27.611" Y="11" />
+        <Point X="27.611" Y="1.781" />
+        <Point X="21" Y="1.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAACQAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Target\ConsoleLogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="currentLogger" />
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.DBLogger">
+    <Position X="15.75" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAACAAAAAAAAAQAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Target\DBLogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.FileLogger">
+    <Position X="20" Y="10" Width="3" />
+    <InheritanceLine Type="ProjectKernel.Classes.Logger.FormattableLogger" FixedFromPoint="true">
+      <Path>
+        <Point X="23.438" Y="9.136" />
+        <Point X="23.438" Y="9.625" />
+        <Point X="21.5" Y="9.625" />
+        <Point X="21.5" Y="10" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAEAAAABAAAACAAAAAAAAEQAQUAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Target\FileLogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="writer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.Password" Collapsed="true">
+    <Position X="0.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQgAABAAARAAAAgAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\Password\Password.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.PasswordVerificator">
+    <Position X="3.5" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\Password\PasswordVerificator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.DBUser">
+    <Position X="3.5" Y="6.75" Width="2" />
+    <InheritanceLine Type="ProjectKernel.Classes.User.User" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="5.757" />
+        <Point X="4.375" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIgACEAAAAAQAAAAAAAAAQAFAAAAgAAIAAQAgAQAgA=</HashCode>
+      <FileName>Classes\User\DBUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="id" />
+      <Field Name="password" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.DBUserStorage">
+    <Position X="3.5" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAQAAAQAAAAAAAQEIAAAAABAGAAA=</HashCode>
+      <FileName>Classes\User\DBUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dbContext" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.UserAlreadyExistException" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\DBUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.SystemUser">
+    <Position X="0.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\SystemUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.User">
+    <Position X="3" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAAAAAQAHAAAAAAAAQAQAAAAAAA=</HashCode>
+      <FileName>Classes\User\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectKernel.Classes.User.CurrentUser">
+    <Position X="6.75" Y="6.75" Width="2.75" />
+    <InheritanceLine Type="ProjectKernel.Classes.User.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="5.757" />
+        <Point X="4.375" Y="6.375" />
+        <Point X="7.188" Y="6.375" />
+        <Point X="7.188" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="instance" Type="ProjectKernel.Classes.User.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.438" Y="6.75" />
+        <Point X="7.438" Y="5.5" />
+        <Point X="5.75" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Instance" Type="ProjectKernel.Classes.User.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.125" Y="6.75" />
+        <Point X="8.125" Y="4.938" />
+        <Point X="5.75" Y="4.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Exception" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ArgumentException" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.SystemException" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ProjectKernel.Classes.Logger.FormattableLogger">
+    <Position X="20" Y="7" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\FormattableLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="System.Guid" Collapsed="true">
+    <Position X="0.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.186" />
+  </Struct>
+  <Interface Name="ProjectKernel.Classes.Logger.IFormatter">
+    <Position X="11.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\Format\IFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjectKernel.Classes.Logger.ILogger" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAGACAAAAAAAAAAAQAABAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjectKernel.Classes.Logger.IWriter">
+    <Position X="20" Y="14.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Logger\IWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ProjectKernel.Classes.Logger.LogLevel">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAAAAAAAEAAAAAAEAEAAA=</HashCode>
+      <FileName>Classes\Logger\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectKernel.Classes.User.UserType">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\User\User.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
